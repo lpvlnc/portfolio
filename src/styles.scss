@@ -9,3 +9,45 @@
     list-style: none;
     text-decoration: none;
 }
+
+:root {
+    --color-bg: #020218;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-bg-blur-black: rgba(3, 3, 23, 0.3);
+    --color-bg-blur-aqua: rgba(0, 255, 255, 0.3);
+    --color-bg-blur-pink: hsla(283, 100%, 50%, 0.300);
+    --transparency-black-1 :rgba(0, 0, 0, 0.9);
+    --transparency-black-2 :rgba(0, 0, 0, 0.3);
+    --transparency-black-3 :rgba(0, 0, 0, 0.1);
+    --transition-default: all 400ms ease;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    color: var(--color-white);
+    line-height: 1.7;
+    cursor: default;
+    background: var(--color-bg);
+    background-image:
+        radial-gradient(at 40% 20%, var(--color-bg-blur-aqua) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, var(--color-bg-blur-pink) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, var(--color-bg-blur-black) 0px, transparent 50%),
+        radial-gradient(at 80% 50%, var(--color-bg-blur-black) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, var(--color-bg-blur-pink) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, var(--color-bg-blur-aqua)  0px, transparent 50%);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}

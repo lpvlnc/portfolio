@@ -1,0 +1,30 @@
+nav {
+    background: var(--transparency-black-2);
+    width: max-content;
+    display: block;
+    padding: 0.7rem 1.7rem;
+    position: fixed;
+    bottom: 2rem;
+    display: flex; // ??
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--transition-default);
+}
+
+.hide {
+    left: 0;
+    transform: translateX(20%);
+    opacity: 0.5;
+}
+
+.hide a {
+    display: none;
+}
+
+.hide > .arrow, .hide > a.active {
+    display: flex;
+}

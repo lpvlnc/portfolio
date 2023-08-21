@@ -1,12 +1,13 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { IsActiveMatchOptions } from '@angular/router';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent {
+export class NavComponent implements OnInit {
   @HostListener("window:scroll", [])
 
   public hide: boolean = false;
@@ -17,6 +18,8 @@ export class NavComponent {
     paths: 'exact',
     fragment: 'exact'
   }
+  public angleLeft = faAngleLeft;
+  public angleRight = faAngleRight;
 
   constructor() { }
 
@@ -35,6 +38,8 @@ export class NavComponent {
     }
   }
 
+  ngOnInit(): void {
+  }
   hideNavbar(): void {
     this.hide = !this.hide;
   }

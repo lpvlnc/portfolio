@@ -1,1 +1,46 @@
-<p>nav works!</p>
+<div class='d-none d-sm-flex'>
+    <nav [ngClass]="hide ? 'hide' : ''">
+        <a routerLink=''
+           fragment='me'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]="linkActiveOptions">
+            home
+        </a>
+        <a routerLink=''
+           fragment='about'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]="linkActiveOptions">
+            About
+        </a>
+        <a routerLink=''
+           fragment='experience'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]="linkActiveOptions">
+            Experience
+        </a>
+        <a routerLink=''
+           fragment='projects'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]="linkActiveOptions">
+            Projects
+        </a>
+        <a routerLink=''
+           fragment='testimonials'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]="linkActiveOptions">
+            Testimonials
+        </a>
+        <a routerLink=''
+           fragment='contact'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]="linkActiveOptions">
+            Contact
+        </a>
+        <a class='arrow' (click)='hideNavbar()'>
+            <!-- <i *ngIf='hide' class='fa-solid fa-angle-right'></i>
+            <i *ngIf='!hide' class='fa-solid fa-angle-left'></i> -->
+            <fa-icon *ngIf='!hide' [icon]="angleLeft"></fa-icon>
+            <fa-icon *ngIf='hide' [icon]="angleRight"></fa-icon>
+        </a>
+    </nav>
+</div>
