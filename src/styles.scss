@@ -17,6 +17,9 @@
     --color-bg-blur-black: rgba(3, 3, 23, 0.3);
     --color-bg-blur-aqua: rgba(0, 255, 255, 0.3);
     --color-bg-blur-pink: hsla(283, 100%, 50%, 0.300);
+    --color-text-default: rgba(255, 255, 255, 0.87);
+    --color-text-light: rgba(255, 255, 255, 0.60);
+    --color-text-disabled: rgba(255, 255, 255, 0.38);
     --transparency-black-1 :rgba(0, 0, 0, 0.9);
     --transparency-black-2 :rgba(0, 0, 0, 0.3);
     --transparency-black-3 :rgba(0, 0, 0, 0.1);
@@ -34,7 +37,7 @@ html {
 }
 
 body {
-    color: var(--color-white);
+    color: var(--color-text-default);
     line-height: 1.7;
     cursor: default;
     background: var(--color-bg);

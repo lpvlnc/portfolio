@@ -5,7 +5,7 @@ nav {
     padding: 0.7rem 1.7rem;
     position: fixed;
     bottom: 2rem;
-    display: flex; // ??
+    display: flex;
     gap: 0.8rem;
     border-radius: 3rem;
     backdrop-filter: blur(10px);
@@ -13,6 +13,23 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     transition: var(--transition-default);
+}
+
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: var(--color-text-default);
+}
+
+nav a.active {
+    color: var(--color-text-default);
 }
 
 .hide {
@@ -27,4 +44,8 @@ nav {
 
 .hide > .arrow, .hide > a.active {
     display: flex;
+}
+
+.arrow {
+    cursor: pointer; 
 }
